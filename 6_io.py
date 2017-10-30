@@ -4,10 +4,10 @@ import string
 class HapaxLegomenon:
 
     def __init__(self):
-        self.filename = input('Enter filename: ')
         self.hapaksy = {}
 
     def read_file(self):
+        self.filename = input('Enter filename: ')
         file = open(self.filename)
         data = file.readlines()
         data = [elem.strip().split(' ') for elem in data]
