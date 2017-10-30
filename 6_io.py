@@ -7,8 +7,8 @@ class HapaxLegomenon:
         self.hapaksy = {}
 
     def read_file(self):
-        self.filename = input('Enter filename: ')
-        file = open(self.filename)
+        filename = input('Enter filename: ')
+        file = open(filename)
         data = file.readlines()
         data = [elem.strip().split(' ') for elem in data]
         data = [item.strip(string.punctuation).lower() for elem in data for item in elem]
