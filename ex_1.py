@@ -18,7 +18,3 @@ class PalindromRecognizer:
             if elem.lower() == elem[::-1].lower():
                 return True
         return False
-
-pali = PalindromRecognizer()
-data = pali.read_file()
-pali.display_line_which_is_palindrom(data)
