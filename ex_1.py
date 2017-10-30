@@ -1,10 +1,8 @@
 class PalindromRecognizer:
 
-    def __init__(self):
-        self.filename = input('Enter the filename: ')
-
     def read_file(self):
-        file = open(self.filename)
+        filename = input('Enter the filename: ')
+        file = open(filename)
         data = file.readlines()
         data = [elem.strip() for elem in data]
         return data
@@ -19,3 +17,8 @@ class PalindromRecognizer:
         for elem in sentence:
             if elem.lower() == elem[::-1].lower():
                 return True
+        return False
+
+pali = PalindromRecognizer()
+data = pali.read_file()
+pali.display_line_which_is_palindrom(data)
